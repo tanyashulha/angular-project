@@ -1,0 +1,75 @@
+h1, h2 {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: normal;
+  margin: 20px 0 40px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons .button {
+  width: 30%;
+  padding: 0 20px 20px;
+  border: 1px solid #474747;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+}
+
+.buttons .button:first-child {
+  margin-right: 5%;
+}
+
+.buttons .button:hover {
+  border: 1px solid #ffffff;
+}
+
+.buttons .button:hover h2::after {
+  right: 0;
+}
+
+.buttons .button h2 {
+  margin: 20px 0;
+  position: relative;
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.buttons .button h2::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  right: 20px;
+  top: 8px;
+  transform: rotate(45deg);
+  transition: 0.3s ease-in-out;
+}
+
+.buttons .button .description {
+  color: #7c7c7c;
+}
+
+@media (max-width: 1200px) {
+  .buttons .button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons .button {
+    width: 100%;
+  }
+
+  .buttons .button:first-child {
+    margin: 0 0 20px 0;
+  }
+}

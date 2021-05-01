@@ -1,0 +1,33 @@
+.btn-return {
+  position: absolute;
+  bottom: 100px;
+  padding: 12px 40px;
+  background-color: transparent;
+  border: 1px solid #a3a3a3;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  color: #a3a3a3;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.btn-return:hover {
+  border: 1px solid #ffffff;
+}
+
+.btn-return::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  left: 20px;
+  top: 12px;
+  transform: rotate(-135deg);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-return:hover::after {
+  left: 12px;
+}

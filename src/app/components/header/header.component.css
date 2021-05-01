@@ -13,8 +13,6 @@ nav .main-menu {
 }
 
 nav .main-menu li {
-  color: #ffffff;
-  letter-spacing: 2px;
   cursor: pointer;
   padding: 3px 10px;
   transition: all 0.3s;
@@ -22,6 +20,16 @@ nav .main-menu li {
   margin: 0 10px;
 }
 
+nav .main-menu li a {
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
 nav .main-menu li:hover {
+  border-bottom: 1px solid #a3a3a3;
+}
+
+nav .main-menu li.active {
   border-bottom: 1px solid #a3a3a3;
 }
