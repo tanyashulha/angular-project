@@ -1,16 +1,16 @@
 <div class="list">
   <div class="wild-animals">
     <h2>Wild Animals List: </h2>
-    <p *ngFor="let animal of listOfAnimals">
-      <span *appStructural="animal.wild">
+    <p *appNgFor="let animal of listOfAnimals">
+      <span *appNgIf="animal.wild">
         - {{ animal.name }}
        </span>
     </p>
   </div>
   <div class="pets">
     <h2>Pets List: </h2>
-    <p *ngFor="let animal of listOfAnimals">
-      <span *appStructural="!animal.wild">
+    <p *appNgFor="let animal of listOfAnimals">
+      <span *appNgIf="!animal.wild">
         - {{ animal.name }}
        </span>
     </p>

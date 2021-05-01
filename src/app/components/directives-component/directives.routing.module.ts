@@ -9,6 +9,7 @@ import { ChangeTextColorDirective } from '../../directives/change-text-color.dir
 import { ButtonToMainPageComponent } from './button-to-main-page/button-to-main-page.component';
 import { DirectivesComponent } from './directives.component';
 import { StructuralDirective } from './../../directives/structural-directive.directive';
+import { NgForDirective } from './../../directives/ng-for-directive.directive';
 
 const DIRECTIVES_ROUTES: Routes = [
   {
@@ -43,7 +44,8 @@ const DIRECTIVES_ROUTES: Routes = [
     ChangeTextColorDirective,
     ButtonToMainPageComponent,
     StructuralDirectiveComponent,
-    StructuralDirective
+    StructuralDirective,
+    NgForDirective
   ],
   exports: [
     RouterModule

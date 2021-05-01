@@ -1,7 +1,7 @@
 import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appStructural]'
+  selector: '[appNgIf]'
 })
 export class StructuralDirective {
   constructor(
@@ -9,7 +9,7 @@ export class StructuralDirective {
     private viewContainer: ViewContainerRef
   ) { }
 
-  @Input('appStructural') set ngIf(ngIf: boolean) {
+  @Input('appNgIf') set ngIf(ngIf: boolean) {
     if (ngIf) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {
