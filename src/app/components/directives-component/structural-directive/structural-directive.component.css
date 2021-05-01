@@ -13,3 +13,28 @@
 .btn-return:hover {
   color: #c5c5c5;
 }
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list div {
+  width: 40%;
+}
+
+.list div p {
+  padding: 0 15px;
+}
+
+.list .wild-animals h2,
+.list .wild-animals p{
+  letter-spacing: 2px;
+  color: #20B2AA;
+}
+
+.list .pets h2,
+.list .pets p {
+  letter-spacing: 2px;
+  color: #66CDAA;
+}

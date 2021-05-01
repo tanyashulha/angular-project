@@ -12,4 +12,43 @@ export class StructuralDirectiveComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  listOfAnimals: any[] = [
+    {
+      name: "Leopard",
+      wild: true
+    },
+    {
+      name: "Shark",
+      wild: true
+    },
+    {
+      name: "Wolf",
+      wild: true
+    },
+    {
+      name: "Panda",
+      wild: true
+    },
+    {
+      name: "Cat",
+      wild: false
+    },
+    {
+      name: "Dog",
+      wild: false
+    },
+    {
+      name: "Pig",
+      wild: false
+    },
+    {
+      name: "Sheep",
+      wild: false
+    },
+    {
+      name: "Guinea pig",
+      wild: false
+    }
+  ]
+
 }
