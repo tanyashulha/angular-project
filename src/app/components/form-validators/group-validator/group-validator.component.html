@@ -1,1 +1,34 @@
-<p>group-validator works!</p>
+<div class="form-container">
+  <form [formGroup]="form" class="form-group">
+    <div class="form-group-field">
+      <div class="form-field">
+        <label>Password*</label>
+        <input class="form-control" formControlName="password" type="password" />
+      </div>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.password">
+          <div class="error-message" *ngIf="form.get('password').hasError(error.type)
+               && (form.get('password').dirty || form.get('password').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="form-group-field">
+      <div class="form-field">
+        <label>Confirm Password*</label>
+        <input class="form-control" formControlName="confirmPassword" type="password" />
+      </div>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.confirmPassword">
+          <div class="error-message" *ngIf="form.get('confirmPassword').hasError(error.type)
+               && (form.get('confirmPassword').dirty || form.get('confirmPassword').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <button>Signup</button>
+    <button class="button_cancel" type="reset" (click)="onReset()">Cancel</button>
+  </form>
+</div>
