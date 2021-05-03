@@ -8,7 +8,7 @@ import { SampleTextComponent } from './sample-text/sample-text.component';
 import { ChangeTextColorDirective } from '../../directives/change-text-color.directive';
 import { ButtonToMainPageComponent } from './button-to-main-page/button-to-main-page.component';
 import { DirectivesComponent } from './directives.component';
-import { StructuralDirective } from './../../directives/structural-directive.directive';
+import { StructuralDirective } from '../../directives/ng-if-directive.directive';
 import { NgForDirective } from './../../directives/ng-for-directive.directive';
 
 const DIRECTIVES_ROUTES: Routes = [
