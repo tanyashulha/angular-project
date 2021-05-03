@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+import { FormValidatorsComponent } from './form-validators.component';
 import { AsynchronousValidatorComponent } from './asynchronous-validator/asynchronous-validator.component';
 import { SynchronousValidatorComponent } from './synchronous-validator/synchronous-validator.component';
 import { GroupValidatorComponent } from './group-validator/group-validator.component';
@@ -9,7 +10,7 @@ import { FormsListComponent } from './forms-list/forms-list.component';
 const FORM_ROUTES: Routes = [
   {
     path: '',
-    component: FormsListComponent,
+    component: FormValidatorsComponent,
     children: [
       {
         path: 'asyncronous-validator',
@@ -35,6 +36,7 @@ const FORM_ROUTES: Routes = [
     RouterModule.forChild(FORM_ROUTES),
   ],
   declarations: [
+    FormValidatorsComponent,
     AsynchronousValidatorComponent,
     SynchronousValidatorComponent,
     GroupValidatorComponent,
