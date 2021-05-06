@@ -19,6 +19,11 @@ h1, h2 {
   width: 50%;
 }
 
+.list .list__link.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .list .list__link:hover {
   border-bottom: 1px solid #ffffff;
 }
