@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
+import { map, filter } from 'rxjs/operators';
+import { ConfigService } from '../../../services/config.service';
+import { Animals } from '../../../interfaces/animals';
 
 @Component({
   selector: 'app-structural-directive',
@@ -6,49 +10,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./structural-directive.component.css']
 })
 export class StructuralDirectiveComponent implements OnInit {
-
-  constructor() { }
+  sub$ = new Subscription();
+  data: Animals;
+  constructor(private configService: ConfigService) { }
 
   ngOnInit(): void {
+    this.sub$.add(
+      this.configService.getData()
+      .subscribe((data) => {
+        console.log(data)
+      })
+    )
   }
 
-  listOfAnimals: any[] = [
-    {
-      name: "Leopard",
-      wild: true
-    },
-    {
-      name: "Shark",
-      wild: true
-    },
-    {
-      name: "Wolf",
-      wild: true
-    },
-    {
-      name: "Panda",
-      wild: true
-    },
-    {
-      name: "Cat",
-      wild: false
-    },
-    {
-      name: "Dog",
-      wild: false
-    },
-    {
-      name: "Pig",
-      wild: false
-    },
-    {
-      name: "Sheep",
-      wild: false
-    },
-    {
-      name: "Guinea pig",
-      wild: false
-    }
-  ]
-
+  ngOnDestroy(): void {
+    this.sub$.unsubscribe();
+  }
 }
