@@ -1,14 +1,14 @@
-export interface Animals {
-  wildAnimals: WildAnimals[],
-  pets: Pets[]
+export interface IAnimals {
+  wildAnimals: IWildAnimals[],
+  pets: IPets[]
 }
 
-export interface WildAnimals {
+export interface IWildAnimals {
   name: string;
   id: number;
 }
 
-export interface Pets {
+export interface IPets {
   name: string;
   id: number;
 }

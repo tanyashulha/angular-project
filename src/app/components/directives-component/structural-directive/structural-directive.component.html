@@ -1,19 +1,15 @@
-<div class="list">
-  <!-- <div class="wild-animals">
+<div class="list" *ngIf="animals | async as animals">
+  <div class="wild-animals">
     <h2>Wild Animals List: </h2>
-    <p *appNgFor="let animal of data.wildAnimals">
-      <span *appNgIf="animal.wild">
-        - {{ animal.name }}
-       </span>
+    <p *appNgFor="let animal of animals.wildAnimals">
+       - {{ animal.name }}
     </p>
   </div>
   <div class="pets">
     <h2>Pets List: </h2>
-    <p *appNgFor="let animal of listOfAnimals">
-      <span *appNgIf="!animal.wild">
-        - {{ animal.name }}
-       </span>
+    <p *appNgFor="let animal of animals.pets">
+      - {{ animal.name }}
     </p>
-  </div> -->
+  </div>
 </div>
 <app-button-to-main-page></app-button-to-main-page>
